@@ -27,5 +27,9 @@ Route::get('/', function () {
 */
 
 Route::group(['middleware' => ['web']], function () {
-    //
+    // Route::get('/category', 'CategoryController@index');
+    // Route::get('/category/create', 'CategoryController@create');
+    // Route::post('/category', 'CategoryController@store');
+    Route::resource('category', 'CategoryController');
 });
+
